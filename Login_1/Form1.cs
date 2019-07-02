@@ -20,15 +20,20 @@ namespace Login_1
             InitializeComponent();
         }
 
-        private void TextBoxUsuario_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            string usuario;
-            usuario = Convert.ToString(textBoxUsuario.Text);
+            string usuario = textBoxUsuario.Text;
+            string usuario_valido = "prueba@correo.com";
+            string clave = textBoxClave.Text;
+            string clave_valida = "clavedeprueba";
+            if(String.Compare(usuario, usuario_valido) != 0 || String.Compare(clave, clave_valida) != 0)
+            {
+                string txtincorrecto = "Error";
+                string incorrecto = "Usuario o clave inválida";
+                MessageBoxIcon icono = MessageBoxIcon.Error;
+                MessageBoxButtons botones = MessageBoxButtons.OK;
+                MessageBox.Show(incorrecto, txtincorrecto, botones, icono);
+            }
         }
 
         private void TextBoxClave_TextChanged(object sender, EventArgs e)

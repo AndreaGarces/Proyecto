@@ -60,7 +60,6 @@
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.Size = new System.Drawing.Size(164, 20);
             this.textBoxUsuario.TabIndex = 2;
-            this.textBoxUsuario.TextChanged += new System.EventHandler(this.TextBoxUsuario_TextChanged);
             // 
             // textBoxClave
             // 
