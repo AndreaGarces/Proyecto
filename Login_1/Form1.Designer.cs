@@ -33,7 +33,7 @@
             this.textBoxUsuario = new System.Windows.Forms.TextBox();
             this.textBoxClave = new System.Windows.Forms.TextBox();
             this.BtnIngresar = new System.Windows.Forms.Button();
-            this.Mostrar = new System.Windows.Forms.CheckBox();
+            this.checkMostrar = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Usuario
@@ -80,22 +80,23 @@
             this.BtnIngresar.UseVisualStyleBackColor = true;
             this.BtnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
             // 
-            // Mostrar
+            // checkMostrar
             // 
-            this.Mostrar.AutoSize = true;
-            this.Mostrar.Location = new System.Drawing.Point(128, 129);
-            this.Mostrar.Name = "Mostrar";
-            this.Mostrar.Size = new System.Drawing.Size(61, 17);
-            this.Mostrar.TabIndex = 5;
-            this.Mostrar.Text = "Mostrar";
-            this.Mostrar.UseVisualStyleBackColor = true;
+            this.checkMostrar.AutoSize = true;
+            this.checkMostrar.Location = new System.Drawing.Point(128, 129);
+            this.checkMostrar.Name = "checkMostrar";
+            this.checkMostrar.Size = new System.Drawing.Size(61, 17);
+            this.checkMostrar.TabIndex = 5;
+            this.checkMostrar.Text = "Mostrar";
+            this.checkMostrar.UseVisualStyleBackColor = true;
+            this.checkMostrar.CheckedChanged += new System.EventHandler(this.CheckMostrar_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 236);
-            this.Controls.Add(this.Mostrar);
+            this.Controls.Add(this.checkMostrar);
             this.Controls.Add(this.BtnIngresar);
             this.Controls.Add(this.textBoxClave);
             this.Controls.Add(this.textBoxUsuario);
@@ -115,7 +116,7 @@
         private System.Windows.Forms.TextBox textBoxUsuario;
         private System.Windows.Forms.TextBox textBoxClave;
         private System.Windows.Forms.Button BtnIngresar;
-        private System.Windows.Forms.CheckBox Mostrar;
+        private System.Windows.Forms.CheckBox checkMostrar;
     }
 }
 
