@@ -33,16 +33,23 @@ namespace Login_1
 
         private void TextBoxClave_TextChanged(object sender, EventArgs e)
         {
-            string clave = textBoxClave.Text;
             textBoxClave.UseSystemPasswordChar = true;
-            textBoxClave.Text = clave;
         }
 
         private void CheckMostrar_CheckedChanged(object sender, EventArgs e)
         {
             string clave = textBoxClave.Text;
-            textBoxClave.UseSystemPasswordChar = false;
-            textBoxClave.Text = clave;
+            if(checkMostrar.Checked)
+            {
+                textBoxClave.UseSystemPasswordChar = false;
+                textBoxClave.Text = clave;
+            }
+            else
+            {
+                textBoxClave.UseSystemPasswordChar = true;
+                textBoxClave.Text = clave;
+            }
+            
         }
     }
 }
